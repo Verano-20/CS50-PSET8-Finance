@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+
+    <p class="header">Quote</p>
+    <form action="/quote" method="post">
+        <div class="form-group">
+        <input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="Symbol" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Get Price</button>
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+    <p class="header">Lookup Symbol</p>
+    <p> (Leave blank for all listings)</p>
+    <form action="/findsymbol" method="post">
+        <div class="form-group">
+        <input autocomplete="off" autofocus class="form-control" name="name" placeholder="Company" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Get Symbol</button>
+    </form>
+
+{% endblock %}

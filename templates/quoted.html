@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+
+    <h4 style="padding:20px;"> A share of {{ name }} ({{ symbol }}) costs {{ price }}.</h4>
+    <form action="/quote" method="get">
+        <button class="btn btn-primary" type="submit">Go Back</button>
+    </form>
+
+{% endblock %}

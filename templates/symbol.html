@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Symbol
+{% endblock %}
+
+{% block main %}
+
+    {% if (matches| length) != 0 %}
+    {% for symbol in matches %}
+    <h4 style="padding:20px;"> The symbol for {{ symbol["name"] }} is {{symbol["symbol"]}}.</h4>
+    {% endfor %}
+    {% else %}
+    <h4 style="padding:20px;"> Cannot find symbol. Please try again.</h4>
+    {% endif %}
+
+    <form action="/quote" method="get">
+        <button class="btn btn-primary" type="submit">Go Back</button>
+    </form>
+
+{% endblock %}

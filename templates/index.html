@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Symbol</th>
+                <th scope="col">Name</th>
+                <th scope="col">Shares</th>
+                <th scope="col">Price</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in range(table[0]| length) %}
+            <tr>
+                <td>{{table[0][i]}}</td>
+                <td>{{table[1][i]}}</td>
+                <td>{{table[2][i]}}</td>
+                <td>{{table[3][i]}}</td>
+                <td>{{table[4][i]}}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="total">{{total}}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

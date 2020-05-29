@@ -45,3 +45,16 @@ main img
     /* constrain images on small screens */
     max-width: 100%;
 }
+
+.total
+{
+    font-weight: bold;
+}
+
+.header
+{
+    text-align: center;
+    font-size: 32px;
+    padding: 5px;
+
+}
